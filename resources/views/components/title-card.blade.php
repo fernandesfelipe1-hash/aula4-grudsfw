@@ -1,3 +1,7 @@
+{{-- @props([
+    'title' => '',
+    'description => ''
+]) --}}
 @props([
     'title' => '',
     'description' => ''

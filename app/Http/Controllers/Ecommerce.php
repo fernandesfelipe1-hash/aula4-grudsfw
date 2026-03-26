@@ -3,20 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\EcommerceModel;
 
 class Ecommerce extends Controller
 {
     // cada página é uma função em um controller
 
     public function index() {
+
+        $model = new EcommerceModel();
+
         // veio do model/banco de dados
-        $nome_produto = 'Bota Super Descolada';
-        $breadcrumb = [
-            'Home' => '/home', 
-            'E-commerce' => '/ecommerce', 
-            'Botas' => '/ecommerce/botas',
-            'Lowa' => '/ecoomerce/botas/lowa'
-        ];
+        $nome_produto = $model->nomeProduto();
+        $breadcrumb = $model->breadcrumbs();
 
         return view('e-commerce', [
             'nome_produto' => $nome_produto,
