@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class EcommerceModel extends Model {
+
+    protected $table = 'config';
     
     // use HasFactory;
-    
-
     public function nomeProduto() {
         return 'Bota Super Descolada';
     }
@@ -22,7 +22,4 @@ class EcommerceModel extends Model {
             'Lowa' => '/ecoomerce/botas/lowa'
         ];
     }
-
-    
-
 }

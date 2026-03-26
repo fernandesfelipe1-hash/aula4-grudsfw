@@ -13,8 +13,10 @@ class Ecommerce extends Controller
 
         $model = new EcommerceModel();
 
-        // veio do model/banco de dados
-        $nome_produto = $model->nomeProduto();
+        // veio do model/banco de dadosj
+        $aux = EcommerceModel::where('key', 'nome_produto')->get();
+
+        $nome_produto = $aux[0]->value;
         $breadcrumb = $model->breadcrumbs();
 
         return view('e-commerce', [
