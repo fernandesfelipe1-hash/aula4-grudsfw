@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('modelo', 64);
             $table->integer('ano', );
             $table->float('motor', 64);
-            $table->decimal('preco', 9, 2);
+            $table->decimal('preco', 9, 2)->nullable();
             $table->boolean('teto_solar');
             $table->date('fabricacao');
             $table->timestamps();

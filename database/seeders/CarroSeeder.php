@@ -12,6 +12,18 @@ class CarroSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Carro::create([
+            'cor' => 'Vermelho',
+            'marca' => 'Honda',
+            'modelo' => 'F1',
+            'ano' => 2000,
+            'teto_solar' => false,
+            'fabricacao' => '2000-02-02',
+        ]);
+
+        // Carro::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
     }
 }
