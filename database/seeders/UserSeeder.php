@@ -5,28 +5,21 @@ namespace Database\Seeders;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Faker\Generator as Faker;
 
 class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
-    public function run(): void
+
+
+    public function run(Faker $faker): void
     {
         User::create([
-            'name' => 'Test1 User',
-            'email' => 'test1@example.com',
-            'password' => hash('sha256', 123345)
-        ]);
-        User::create([
-            'name' => 'Test2 User',
-            'email' => 'test2@example.com',
-            'password' => hash('sha256', 123345)
-        ]);
-        User::create([
-            'name' => 'Test3 User',
-            'email' => 'test3@example.com',
-            'password' => hash('sha256', 123345)
+            'name' => $faker->name,
+            'email' => $faker->email,
+            'password' => $faker->password, //hash('sha256', 123345)
         ]);
     }
 }
