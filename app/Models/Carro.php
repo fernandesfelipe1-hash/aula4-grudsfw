@@ -12,10 +12,10 @@ class Carro extends Model
     protected $fillable = [
         'cor',
         'preco',
-        'marca',
         'modelo',
         'ano',
         'teto_solar',
+        'motor',
         'fabricacao',
     ];
 

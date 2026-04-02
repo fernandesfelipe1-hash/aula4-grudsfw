@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Carro;
 
 class CarroSeeder extends Seeder
 {
@@ -14,9 +15,9 @@ class CarroSeeder extends Seeder
     {
         Carro::create([
             'cor' => 'Vermelho',
-            'marca' => 'Honda',
             'modelo' => 'F1',
             'ano' => 2000,
+            'motor' => 2000,
             'teto_solar' => false,
             'fabricacao' => '2000-02-02',
         ]);
